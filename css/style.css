@@ -198,3 +198,93 @@ h2{font-size:clamp(2.2rem,4.8vw,4.4rem)}
   .cta__btns{width:100%}.cta__btns .btn{width:100%;justify-content:space-between}
   .footer__tools{justify-content:stretch}.footer__tools .btn{width:100%}
 }
+
+/* ===== 16. CẬP NHẬT THEO STEP 2 ===== */
+/* Hero: tên ĂN THÔI + slogan nổi bật, địa chỉ ở góc trái, ít chữ */
+.hero{padding-bottom:clamp(110px,17vh,180px)}
+.hero h1{font-size:clamp(3.6rem,12vw,10.5rem);letter-spacing:.06em;line-height:1;margin:0 0 18px}
+.hero__slogan{font:italic 500 clamp(1.4rem,2.8vw,2.4rem)/1.3 var(--f-head);margin-bottom:46px}
+.hero__addr{position:absolute;z-index:3;left:var(--pad);bottom:26px;display:flex;align-items:center;gap:10px;padding-left:18px;font-size:.95rem;color:var(--ivory)}
+.hero__addr svg{width:20px;height:20px;color:var(--gold);flex:none}
+.hero__slogan,.hero__addr{opacity:0;animation:fade 1s .8s forwards}
+/* Lời ngỏ: giữ nguyên văn STEP 2 */
+.intro{padding-bottom:clamp(30px,5vw,70px)}
+.intro__top{grid-template-columns:1fr 1.25fr;align-items:start}
+.intro h2{font-size:clamp(1.9rem,3.8vw,3.4rem);text-transform:uppercase;letter-spacing:.02em;line-height:1.2}
+.intro__text p{color:var(--muted);font-size:1.12rem;margin-bottom:22px}
+.intro__text p.lead{margin-bottom:0;color:var(--green);font:italic 500 clamp(1.4rem,2.2vw,1.9rem)/1.5 var(--f-head)}
+/* Mục chưa làm: hiển thị mờ, không bấm được */
+.soon{cursor:not-allowed}
+.nav .soon{padding:6px 0;font-size:.92rem;font-weight:700;letter-spacing:.03em;opacity:.55}
+.drawer__nav .soon{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:28px 0;border-bottom:1px solid var(--line);font:700 clamp(1.25rem,2vw,1.7rem)/1.2 var(--f-body);color:var(--muted)}
+.drawer__nav .soon small{font:400 .72rem var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-d)}
+.footer .soon{opacity:.55}
+.footer__tag+.btn{margin-top:28px}
+/* Trang Liên hệ: thông tin + bản đồ ở trên, form đặt bàn ngay bên dưới */
+.info-sec{display:grid;grid-template-columns:5fr 6fr;gap:clamp(30px,6vw,110px);align-items:start;padding-block:clamp(70px,9vw,130px) clamp(40px,6vw,80px)}
+.info-sec dl{display:grid;gap:26px;margin-bottom:36px}
+.info-sec dt{font:700 .78rem var(--f-body);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-d);margin-bottom:4px}
+.map{aspect-ratio:16/11;background:var(--ivory);border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;border:0}
+.book{padding-bottom:clamp(80px,12vw,160px)}
+@media(max-width:900px){.intro__top,.info-sec{grid-template-columns:1fr}.hero__addr{bottom:20px}}
+
+/* ===== 17. TRANG CON (Về chúng tôi, Thực đơn, Trải nghiệm, Journal) ===== */
+.sec{padding-block:clamp(70px,10vw,140px)}
+.sec--ivory{background:var(--ivory)}
+.sec__head{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,6vw,100px);align-items:end;margin-bottom:clamp(36px,5vw,70px)}
+.sec__head p{color:var(--muted)}
+.split--s{min-height:0;margin-top:0}
+.split--s .media{min-height:clamp(320px,42vw,560px)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,36px)}
+.cards--2{grid-template-columns:1fr 1fr}
+.menu-group+.menu-group{margin-top:clamp(50px,7vw,90px)}
+.group-title{font-size:clamp(1.6rem,2.6vw,2.2rem);margin-bottom:24px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.card2{display:block;background:var(--ivory);border:1px solid var(--line);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.sec--ivory .card2{background:var(--cream)}
+.card2:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(23,63,53,.12)}
+.card2 .media{aspect-ratio:4/3}
+.card2__b{padding:24px 26px 30px}
+.card2__row{display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+.card2 h3{font-size:1.45rem;margin-bottom:8px}
+.card2 p{color:var(--muted);font-size:.98rem}
+.card2--text{padding:clamp(26px,3vw,44px)}
+.price{color:var(--gold-d);font-weight:700;white-space:nowrap}
+.card2 .meta{display:flex;justify-content:space-between;gap:12px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-d);margin-bottom:10px}
+.card2--post{animation:pop .6s var(--ease)}
+@keyframes pop{from{opacity:0;transform:translateY(14px)}}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px}
+.chip{min-height:44px;padding:0 20px;border:1px solid var(--line);background:transparent;color:var(--green);font:700 .9rem var(--f-body);cursor:pointer;transition:background .3s,color .3s,border-color .3s}
+.chip:hover{border-color:var(--green)}
+.chip[aria-pressed=true]{background:var(--green);color:var(--ivory);border-color:var(--green)}
+.rows{display:grid;gap:clamp(40px,6vw,90px)}
+.row{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(24px,5vw,90px);align-items:center}
+.row--rev{grid-template-columns:1fr 1.15fr}.row--rev .media{order:2}
+.row .media{aspect-ratio:4/3}
+.row__t h3{font-size:clamp(1.8rem,3.2vw,2.8rem);margin-bottom:14px}
+.row__t p{color:var(--muted);margin-bottom:12px}
+.timeline{list-style:none;padding:0;border-left:1px solid var(--line);margin-left:8px}
+.timeline li{display:grid;grid-template-columns:140px 1fr;gap:24px;padding:0 0 40px 32px;position:relative}
+.timeline li::before{content:"";position:absolute;left:-6px;top:10px;width:11px;height:11px;border-radius:50%;background:var(--gold)}
+.timeline b{font:600 1.4rem var(--f-head);color:var(--green)}
+.timeline h3{font-size:1.3rem}
+.quad--flat{margin-top:0}
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:clamp(200px,26vw,400px);gap:16px}
+.gallery .media:nth-child(1){grid-column:span 7}.gallery .media:nth-child(2){grid-column:span 5}
+.gallery .media:nth-child(n+3){grid-column:span 4}
+.feat{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(24px,5vw,80px);align-items:center}
+.feat .media{aspect-ratio:4/3}
+.feat h2{font-size:clamp(2rem,3.8vw,3.4rem);margin-bottom:18px}
+.feat .link{margin-top:24px}.feat .date{display:block;margin-top:18px;color:var(--muted)}
+.prose{max-width:760px;margin-inline:auto}
+.prose p{font-size:1.12rem;margin-bottom:22px}
+.endcta{background:var(--green);color:var(--ivory);text-align:center;padding-block:clamp(80px,11vw,150px)}
+.endcta .wrap{display:flex;flex-direction:column;align-items:center}
+.endcta .eyebrow{color:var(--gold)}
+.endcta h2{color:var(--ivory);margin-bottom:36px}
+@media(max-width:900px){
+  .sec__head,.feat,.row,.row--rev,.cards,.cards--2{grid-template-columns:1fr}
+  .row--rev .media{order:0}
+  .gallery{grid-auto-rows:clamp(200px,60vw,320px)}.gallery .media{grid-column:1/-1!important}
+  .timeline li{grid-template-columns:1fr;gap:6px}
+}
